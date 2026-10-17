@@ -173,7 +173,7 @@ flowchart LR
 - Kibana Basic license blocks webhook connectors; solved with the 30-day trial.
 - Session window tuning (20-min and 45-min caps) confirmed the original gap-based logic as best.
 
-## 🗺️ Roadmap (towards PFE)
+## 🗺️ Roadmap (towards)
 
 - [ ] Larger and more diverse dataset
 - [ ] Improve recall (feature engineering, ensembles)
