@@ -91,7 +91,7 @@ reconnaissance → brute force → execution → persistence → privilege escal
 ## 🚀 Getting Started
 
 ```bash
-git clone https://github.com/your-github-username/ai-powered-soc-ueba-soar.git
+git clone https://github.com/kandjcb/ai-powered-soc-ueba-soar.git
 cd ai-powered-soc-ueba-soar
 python3 -m venv venv && source venv/bin/activate
 pip install -r requirements.txt
@@ -155,7 +155,7 @@ For educational purposes. Attack simulations were performed only in an isolated 
 ## 👤 Author
 
 **Mohamed Kacim El Afi**, engineering student at ENSA Khouribga
-[GitHub](https://github.com/your-github-username)
+[GitHub](https://github.com/kandjcb)
 
 ## 📄 License
 
