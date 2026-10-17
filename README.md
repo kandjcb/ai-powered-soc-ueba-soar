@@ -138,7 +138,7 @@ streamlit run scripts/integration/dashboard.py         # dashboard
 
 When a session is flagged as anomalous, the response is automated with **Shuffle**.
 
-![Shuffle workflow](docs/screenshots/shuffle-workflow.png)
+Shuffle workflow
 
 ```mermaid
 flowchart LR
