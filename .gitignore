@@ -1,0 +1,25 @@
+# Secrets
+.env
+*.key
+*.pem
+*.crt
+secrets/
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Data / logs (only anonymized samples allowed)
+*.log
+data/*.csv
+!data/sample/*.csv
+
+# Models
+*.pkl
+*.joblib
+
+# OS / editor
+.DS_Store
+.vscode/
