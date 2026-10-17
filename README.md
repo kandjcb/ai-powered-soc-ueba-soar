@@ -186,9 +186,7 @@ For educational purposes. Attack simulations were performed only in an isolated 
 
 ## 👤 Author
 
-**Mohamed Kacim El Afi**, engineering student at ENSA Khouribga
+**Mohamed Kacim El Afi**
 [GitHub](https://github.com/kandjcb)
 
-## 📄 License
 
-MIT
