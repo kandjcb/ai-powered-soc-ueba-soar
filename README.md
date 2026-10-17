@@ -134,6 +134,38 @@ streamlit run scripts/integration/dashboard.py         # dashboard
 
 > The full datasets are not included (real lab logs). See `data/sample/` for the expected format.
 
+## 🤖 SOAR Workflow (Automated Incident Response)
+
+When a session is flagged as anomalous, the response is automated with **Shuffle**.
+
+![Shuffle workflow](docs/screenshots/shuffle-workflow.png)
+
+```mermaid
+flowchart LR
+    A[Webhook] --> B[Shuffle Tools]
+    B --> C[Mimikatz check]
+    B --> D[Xmrig check]
+    C --> E[HTTP request]
+    D --> E
+    E --> F[TheHive case]
+    F --> G[Email notification]
+```
+
+### How it works
+
+1. **Webhook trigger:** the Kibana alert (anomalous session from the UEBA model) calls the Shuffle webhook with the event data.
+2. **Shuffle Tools:** parses the incoming alert and prepares the data for the next steps.
+3. **Parallel threat checks:** two branches run at the same time, one looking for **Mimikatz** (credential dumping) and one for **Xmrig** (crypto-mining) indicators.
+4. **HTTP node:** merges the results of both branches into a single request.
+5. **TheHive:** creates a case with the alert details and findings, so an analyst can investigate immediately.
+6. **Email:** notifies the analyst that a new case was created.
+
+### Deployment notes
+
+- Shuffle runs with Docker on the Ubuntu VM (`config/docker-compose.yml`).
+- OpenSearch (used by Shuffle) needs `vm.max_map_count=262144`.
+- Credentials are supplied through environment variables and are never committed.
+
 ## 🔧 Known Issues & Lessons Learned
 
 - Shuffle's OpenSearch needs `vm.max_map_count=262144`.
